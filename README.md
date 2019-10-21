@@ -15,30 +15,12 @@ Start Minikube and create a cluster:
 minikube start
 ```
 
-## Notes
-Access the kubernetes dashboard running within the minikube cluster
+## Tested on
+minikube v1.4.0 on Microsoft Windows 10 Pro 10.0.18362 Build 18362
 ```
-minikube dashboard
-```
-
-Expose <deploymemnt-name> Deployment as a Service:
-```
-kubectl expose deployment <deploymemnt-name> --type=NodePort --port=8080
-```
-
-Check if the Pod is up and running:
-```
-kubectl get pod
-```
-
-Get the URL of the exposed Service:
-```
-minikube service <deploymemnt-name> --url
-```
-
-Stop the local Minikube cluster:
-```
-minikube stop
+$ kubectl version
+Client Version: version.Info{Major:"1", Minor:"16", GitVersion:"v1.16.0", GitCommit:"2bd9643cee5b3b3a5ecbd3af49d09018f0773c77", GitTreeState:"clean", BuildDate:"2019-09-18T14:36:53Z", GoVersion:"go1.12.9", Compiler:"gc", Platform:"windows/amd64"}
+Server Version: version.Info{Major:"1", Minor:"16", GitVersion:"v1.16.0", GitCommit:"2bd9643cee5b3b3a5ecbd3af49d09018f0773c77", GitTreeState:"clean", BuildDate:"2019-09-18T14:27:17Z", GoVersion:"go1.12.9", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
 ## Troubleshooting
